@@ -24,7 +24,7 @@ app.use(limiter);
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 
-const allowedOrigins = [process.env.AUTHO_DOMAIN, 'http://localhost:4200', 'http://localhost:8080', 'http://localhost'];
+const allowedOrigins = ['http://jollywheelofwonders.com', 'https://jollywheelofwonders.com', 'http://localhost:4200', 'http://localhost:8080', 'http://localhost'];
 app.use(cors({
 	origin: function(origin, callback){
 		if(!origin) return callback(null, true);
