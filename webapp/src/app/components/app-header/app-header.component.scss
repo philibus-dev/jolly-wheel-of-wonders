@@ -1,6 +1,9 @@
 @import "../../../style-includes/variables";
 
 .app-header-container {
+  h1 {
+    color: red;
+  }
 
   a {
     color: deepskyblue;
