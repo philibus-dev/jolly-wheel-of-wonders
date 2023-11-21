@@ -3,16 +3,36 @@ import {RouterModule, Routes} from '@angular/router';
 
 const routes: Routes = [
   {
-    path: 'welcome',
-    loadChildren: () => import('./containers/welcome/welcome.module')
-      .then(m => m.WelcomeModule)
+    path: 'home',
+    loadChildren: () => import('./containers/home/home.module')
+      .then(m => m.HomeModule)
+  },
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  {
+    path: 'user/:id',
+    loadChildren: () => import('./containers/user/profile/profile.module')
+      .then(m => m.ProfileModule)
   },
   {
-    path: 'user-list',
-    loadChildren: () => import('./containers/user-list/user-list.module')
-      .then(m => m.UserListModule)
+    path: 'instructions',
+    loadChildren: () => import('./containers/instructions/instructions.module')
+      .then(m => m.InstructionsModule)
   },
-  { path: '', redirectTo: 'welcome', pathMatch: 'full' },
+  {
+    path: 'game/start-game',
+    loadChildren: () => import('./containers/game/start-game/start-game.module')
+      .then(m => m.StartGameModule)
+  },
+  {
+    path: 'game/spin-wheel',
+    loadChildren: () => import('./containers/game/spin-wheel/spin-wheel.module')
+      .then(m => m.SpinWheelModule)
+  },
+  {
+    path: 'game/actions',
+    loadChildren: () => import('./containers/game/game-actions/game-actions.module')
+      .then(m => m.GameActionsModule)
+  },
   {
     path: '404',
     loadChildren: () => import('./containers/fourOfour/fourOfour.module')
