@@ -1,13 +1,14 @@
 import { NgModule } from '@angular/core';
 import { HomeComponent } from './home.component';
-import {HomeRoutes} from "./home.routes";
+import { HomeRoutes } from "./home.routes";
+import { WheelComponent } from 'src/app/components/wheel/wheel.component';
 
 
 @NgModule({
   declarations: [
     HomeComponent
   ],
-  imports: [],
+  imports: [WheelComponent],
   providers: [],
   exports: [
     HomeComponent,

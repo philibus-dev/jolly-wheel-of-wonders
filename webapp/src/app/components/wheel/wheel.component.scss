@@ -1,0 +1,47 @@
+.arrow-container {
+    position: relative;
+}
+
+.wheel-container {
+    margin: 24px;
+    border: 1px solid #666;
+    overflow: hidden;
+    width: 400px;
+    height: 400px;
+    background-color: #222;
+    box-shadow:
+        inset 0px 60px 60px -40px #000,
+        inset 0px -60px 60px -40px #000;
+
+    .wheel {
+        transform: translateY(-50px);
+
+        .wheel-option {
+            font-size: 34px;
+            font-weight: bold;
+            border: 1px solid #333;
+            width: 400px;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            user-select: none;
+
+            &.highlight {
+                color: #eee;
+            }
+        }
+    }
+}
+
+.arrow-right {
+    position: absolute;
+    top: 140px;
+    z-index: 100;
+    width: 0;
+    height: 0;
+    border-top: 60px solid transparent;
+    border-bottom: 60px solid transparent;
+
+    border-left: 60px solid green;
+}
