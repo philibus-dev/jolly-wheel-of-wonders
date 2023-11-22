@@ -87,7 +87,7 @@ export class WheelComponent implements OnInit {
       // Incidentally this is the 37th element in the "multiWheelArray" array
       const thirtyEighthElement = this.el.nativeElement.querySelector('.wheel-option:nth-child(38)');
       this.renderer.addClass(thirtyEighthElement, 'highlight');
-      // Emit the winning number from the event when the animation is complete
+      // Emit the winning value from the event when the animation is complete
       this.animationDone.emit(this.multiWheelArray[37]);
     }
   }
