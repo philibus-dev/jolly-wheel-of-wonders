@@ -8,7 +8,7 @@
       <a [routerLink]="['user/new']">Register</a> | 
     </div>
     
-    <div class="links-logged-in" *ngIf="currUser">
+    <div class="links-logged-in" *ngIf="fbAuth.user | async as user">
       <a [routerLink]="['user/123-456']">Edit Profile</a> |
       <a [routerLink]="['game/start-game']">Start Game</a> |
       <a [routerLink]="['game/spin-wheel']">Spin Wheel</a> |

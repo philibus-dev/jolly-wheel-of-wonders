@@ -2,6 +2,7 @@ import {NgModule} from '@angular/core';
 import {AppHeaderComponent} from './app-header.component';
 import {AsyncPipe, NgIf} from "@angular/common";
 import {RouterLink} from "@angular/router";
+import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 
 @NgModule({
   declarations: [
@@ -10,7 +11,8 @@ import {RouterLink} from "@angular/router";
     imports: [
         NgIf,
         AsyncPipe,
-        RouterLink
+        RouterLink,
+        AngularFireAuthModule
     ],
   exports: [AppHeaderComponent]
 })
