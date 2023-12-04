@@ -1,0 +1,16 @@
+<!-- See the entire array in the HTML -->
+<!-- <div>{{ multiWheelArray | json }}</div> -->
+
+<!-- Manually spin with a button -->
+<!-- <button (click)="startSpin()">Spin Wheel</button> -->
+
+<div class="arrow-container">
+    <div class="arrow-right"></div>
+    <div class="wheel-container" (click)="startSpin()">
+        <div class="wheel" [@spinAnimation]="animationState" (@spinAnimation.done)="onAnimationDone($event)">
+            <div *ngFor="let option of multiWheelArray" class="wheel-option">
+                <div class="label">{{ option }}</div>
+            </div>
+        </div>
+    </div>
+</div>

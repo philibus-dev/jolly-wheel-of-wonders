@@ -1,33 +1,35 @@
 {
-  "name": "jolly-wheel-of-wonders-webapp",
-  "version": "0.0.1",
+  "name": "webapp",
+  "version": "0.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --base-href /webapp/",
+    "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test --browsers=ChromeHeadlessCustom --no-watch",
-    "test-report": "ng test --browsers=ChromeHeadlessCustom --no-watch --code-coverage",
-    "test-local": "ng test --browsers=Chrome"
+    "test": "ng test"
   },
   "private": true,
   "dependencies": {
-    "@angular/animations": "^17.0.3",
-    "@angular/common": "^17.0.3",
-    "@angular/compiler": "^17.0.3",
-    "@angular/core": "^17.0.3",
-    "@angular/forms": "^17.0.3",
-    "@angular/platform-browser": "^17.0.3",
-    "@angular/platform-browser-dynamic": "^17.0.3",
-    "@angular/router": "^17.0.3",
+    "@angular/animations": "^16.2.0",
+    "@angular/cdk": "^16.2.12",
+    "@angular/common": "^16.2.0",
+    "@angular/compiler": "^16.2.0",
+    "@angular/core": "^16.2.0",
+    "@angular/fire": "^16.0.0",
+    "@angular/forms": "^16.2.0",
+    "@angular/material": "^16.2.12",
+    "@angular/platform-browser": "^16.2.0",
+    "@angular/platform-browser-dynamic": "^16.2.0",
+    "@angular/router": "^16.2.0",
+    "firebase": "^10.7.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
-    "zone.js": "~0.14.2"
+    "zone.js": "~0.13.0"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "^17.0.5",
-    "@angular/cli": "~17.0.5",
-    "@angular/compiler-cli": "^17.0.3",
+    "@angular-devkit/build-angular": "^16.2.10",
+    "@angular/cli": "^16.2.10",
+    "@angular/compiler-cli": "^16.2.0",
     "@types/jasmine": "~4.3.0",
     "jasmine-core": "~4.6.0",
     "karma": "~6.4.0",
@@ -38,6 +40,6 @@
     "karma-jasmine-html-reporter": "~2.1.0",
     "puppeteer": "^21.1.1",
     "ts-node": "^10.9.1",
-    "typescript": "~5.2.2"
+    "typescript": "~5.1.3"
   }
 }

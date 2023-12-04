@@ -10,10 +10,11 @@
 
 // I hate bright white backgrounds
 body {
-  color: red;
+  color: #999;
   padding: 1rem;
-  background-color: green;
+  background-color: #333;
 }
+
 // Example centered container box
 .container {
   display: block;
@@ -21,11 +22,12 @@ body {
   margin: 0 auto 1.5rem;
   background-color: $background-color;
   border: 1px solid $border-color;
-  color: red;
+  color: #ccc;
 
   &.no-border {
     border: none;
   }
+
   &.no-background {
     background: none;
   }
@@ -44,6 +46,7 @@ body {
   &.background-darker {
     background-color: $background-color-darker;
   }
+
   &.no-background {
     background: none;
   }
@@ -57,6 +60,7 @@ body {
   .column {
     padding: 1rem;
     flex: 1;
+
     &:not(:last-child) {
       border-right: 1px solid $border-color;
     }
@@ -72,6 +76,7 @@ body {
       flex-grow: 0;
       flex-basis: fit-content;
     }
+
     &.tools {
       background-color: #cb3434;
 
@@ -80,6 +85,7 @@ body {
         margin-right: 1rem;
       }
     }
+
     // Add New User column
     &.add-new {
       text-align: right;

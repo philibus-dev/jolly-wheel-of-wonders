@@ -1,3 +1,46 @@
 <div class="home-container">
  Welcome to the jolly-wheel-of-wonders
 </div>
+
+<div class="logged-in-message" *ngIf="fbAuth.user | async as user; else showLoginRegister">
+    You're currently logged in as {{ user.email }}!
+</div>
+
+<ng-template #showLoginRegister>
+    <div class="login-form">
+        <form [formGroup]="userForm">
+
+            <div class="form-input-container text">
+                <div class="label">Email:</div>
+                <div class="value">
+                    <input formControlName="email" 
+                        type="email"
+                        class="form-input full-size" 
+                        placeholder="Email" />
+                </div>
+            </div>
+
+            <div class="form-input-container text">
+                <div class="label">Password:</div>
+                <div class="value">
+                    <input formControlName="password" 
+                        type="password"
+                        class="form-input full-size" 
+                        placeholder="Password" />
+                </div>
+            </div>
+            
+            <div class="form-input-container button">
+                <button class="form-input full-size" 
+                    (click)="login()">
+                    Login
+                </button> 
+                <button class="form-input full-size" 
+                    (click)="register()">
+                    Register
+                </button>
+            </div>
+        
+        </form>
+    </div>
+</ng-template>

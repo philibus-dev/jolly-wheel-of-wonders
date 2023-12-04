@@ -2,13 +2,26 @@
   <h1>Jolly Wheel of Wonders!</h1>
 
   <ng-container>
-    <a [routerLink]="['/']">Home</a> |
-    <a [routerLink]="['user/new']">Create User</a> |
-    <a [routerLink]="['user/123-456']">Edit User</a> |
-    <a [routerLink]="['instructions']">Instructions</a> |
-    <a [routerLink]="['game/start-game']">Start Game</a> |
-    <a [routerLink]="['game/spin-wheel']">Spin Wheel</a> |
-    <a [routerLink]="['game/actions']">Game Actions</a>
+    <div class="links-all-access">
+      <a [routerLink]="['/']">Home</a> | 
+      <a [routerLink]="['instructions']">Instructions</a> | 
+    </div>
+
+    <!--
+    <div class="links-in-game">
+      <a [routerLink]="['game/spin-wheel']">Spin Wheel</a> |
+      <a [routerLink]="['game/actions']">Game Actions</a> |
+    </div>
+    -->
+    
+    <div class="links-logged-in" *ngIf="fbAuth.user | async as user">
+      <a [routerLink]="['user/' + user.uid]">Edit Profile</a> |
+      <a [routerLink]="['game/start-game']">Start Game</a> |
+      
+      <a (click)="logout()">Logout</a>
+    </div>
+
+    
   </ng-container>
 
   <hr />
