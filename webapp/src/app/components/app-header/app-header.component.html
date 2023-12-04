@@ -5,15 +5,23 @@
     <div class="links-all-access">
       <a [routerLink]="['/']">Home</a> | 
       <a [routerLink]="['instructions']">Instructions</a> | 
-      <a [routerLink]="['user/new']">Register</a> | 
     </div>
+
+    <!--
+    <div class="links-in-game">
+      <a [routerLink]="['game/spin-wheel']">Spin Wheel</a> |
+      <a [routerLink]="['game/actions']">Game Actions</a> |
+    </div>
+    -->
     
     <div class="links-logged-in" *ngIf="fbAuth.user | async as user">
-      <a [routerLink]="['user/123-456']">Edit Profile</a> |
+      <a [routerLink]="['user/' + user.uid]">Edit Profile</a> |
       <a [routerLink]="['game/start-game']">Start Game</a> |
-      <a [routerLink]="['game/spin-wheel']">Spin Wheel</a> |
-      <a [routerLink]="['game/actions']">Game Actions</a>
+      
+      <a (click)="logout()">Logout</a>
     </div>
+
+    
   </ng-container>
 
   <hr />

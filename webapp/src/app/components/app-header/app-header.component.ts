@@ -15,4 +15,9 @@ export class AppHeaderComponent {
     public router: Router, 
     public fbAuth: AngularFireAuth) {}
 
+  logout() {
+    this.fbAuth.signOut();
+    this.router.navigate(['/']);
+  }
+
 }
