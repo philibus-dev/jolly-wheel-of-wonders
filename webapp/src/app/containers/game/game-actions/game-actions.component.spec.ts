@@ -1,17 +1,17 @@
 import { TestBed } from '@angular/core/testing';
-import { WelcomeComponent } from './welcome.component';
+import { GameActionsComponent } from './game-actions.component';
 
-describe('WelcomeComponent', () => {
+describe('GameActionsComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [
-        WelcomeComponent
+        GameActionsComponent
       ],
     }).compileComponents();
   });
 
   it('should create the app', () => {
-    const fixture = TestBed.createComponent(WelcomeComponent);
+    const fixture = TestBed.createComponent(GameActionsComponent);
     const app = fixture.componentInstance;
     expect(app).toBeTruthy();
   });
