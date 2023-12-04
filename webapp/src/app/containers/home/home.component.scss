@@ -1,5 +1,37 @@
 @import "../../../style-includes/variables";
 
-.home-container {
+.logged-in-message {
+    margin-top: 20px;
+}
 
+.login-form {
+    & > form {
+        
+        .form-input-container:not(.button) {
+            margin-top: 15px;
+        }
+
+        .form-input-container.button {
+            margin-top: 20px;
+        }
+
+        input[type="email"], input[type="password"] {
+            border-radius: 10px;
+            border: 1px solid grey;
+            padding: 10px;
+            width: 100%;
+        }
+
+        button {
+            &:first-child {
+                margin-right: 15px;
+            }
+
+            border-radius: 10px;
+            width: 100px;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+    }
 }

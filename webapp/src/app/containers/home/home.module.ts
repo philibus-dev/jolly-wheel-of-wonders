@@ -1,14 +1,18 @@
 import { NgModule } from '@angular/core';
 import { HomeComponent } from './home.component';
 import { HomeRoutes } from "./home.routes";
-import { WheelComponent } from 'src/app/components/wheel/wheel.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 
 @NgModule({
   declarations: [
     HomeComponent
   ],
-  imports: [WheelComponent],
+  imports: [
+    ReactiveFormsModule,
+    CommonModule
+  ],
   providers: [],
   exports: [
     HomeComponent,

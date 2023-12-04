@@ -1,5 +1,7 @@
-import { Component, VERSION } from '@angular/core';
+import { Component, Input, VERSION } from '@angular/core';
 import { Router } from '@angular/router';
+import { Auth } from '@angular/fire/auth';
+import { AngularFireAuth } from '@angular/fire/compat/auth';
 
 @Component({
   selector: 'app-header',
@@ -7,8 +9,15 @@ import { Router } from '@angular/router';
   styleUrls: ['./app-header.component.scss']
 })
 export class AppHeaderComponent {
-  angularVersion = VERSION.full;
+  @Input() currUser: string | undefined;
 
-  constructor(public router: Router) {}
+  constructor(
+    public router: Router, 
+    public fbAuth: AngularFireAuth) {}
+
+  logout() {
+    this.fbAuth.signOut();
+    this.router.navigate(['/']);
+  }
 
 }
