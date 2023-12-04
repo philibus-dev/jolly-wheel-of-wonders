@@ -4,9 +4,11 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --base-href /webapp/",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test --browsers=ChromeHeadlessCustom --no-watch",
+    "test-report": "ng test --browsers=ChromeHeadlessCustom --no-watch --code-coverage",
+    "test-local": "ng test --browsers=Chrome"
   },
   "private": true,
   "dependencies": {
