@@ -5,4 +5,10 @@ import {Component} from '@angular/core';
   templateUrl: './spin-wheel.component.html',
   styleUrls: ['./spin-wheel.component.scss']
 })
-export class SpinWheelComponent {}
+export class SpinWheelComponent {
+
+  doneSpinning($event: number | "Swap") {
+    console.log(`The wheel landed on ${$event}`);
+  }
+
+}
