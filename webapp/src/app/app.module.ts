@@ -7,7 +7,10 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { AppHeaderModule } from './components/app-header/app-header.module';
 
+import { appConfig } from './app.config';
+
 @NgModule({
+  ...appConfig,
   declarations: [AppComponent],
   imports: [
     BrowserModule,
