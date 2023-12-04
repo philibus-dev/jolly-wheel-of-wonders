@@ -6,6 +6,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { AppHeaderModule } from './components/app-header/app-header.module';
+import { Auth } from '@angular/fire/auth';
 
 import { appConfig } from './app.config';
 
@@ -20,7 +21,7 @@ import { appConfig } from './app.config';
     ReactiveFormsModule,
     AppHeaderModule
   ],
-  providers: [],
+  providers: [Auth],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

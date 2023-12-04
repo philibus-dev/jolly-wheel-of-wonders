@@ -1,5 +1,6 @@
-import { Component, VERSION } from '@angular/core';
+import { Component, Input, VERSION } from '@angular/core';
 import { Router } from '@angular/router';
+import { Auth } from '@angular/fire/auth';
 
 @Component({
   selector: 'app-header',
@@ -7,7 +8,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./app-header.component.scss']
 })
 export class AppHeaderComponent {
-  angularVersion = VERSION.full;
+  @Input() currUser: string | undefined;
 
   constructor(public router: Router) {}
 

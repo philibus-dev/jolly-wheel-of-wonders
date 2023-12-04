@@ -7,7 +7,7 @@ import { trigger, style, animate, transition, AnimationEvent, state } from '@ang
   standalone: true,
   imports: [CommonModule],
   templateUrl: './wheel.component.html',
-  styleUrl: './wheel.component.scss',
+  styleUrls: ['./wheel.component.scss'],
   animations: [
     trigger('spinAnimation', [
       state('start', style({ transform: 'translateY(-50px)' })),
