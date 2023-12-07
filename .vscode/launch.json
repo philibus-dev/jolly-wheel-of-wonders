@@ -1,0 +1,23 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "command": "npm start",
+            "name": "Run Backend",
+            "request": "launch",
+            "type": "node-terminal",
+            "cwd": "${workspaceFolder}/nodeJS"
+        },
+        {
+            "name": "Launch Angular",  // name of task
+            "type": "chrome",
+            "request": "launch",
+            "preLaunchTask": "npm: start", // task of task.json
+            "url": "http://localhost:4200/", // route where it will launch
+            "webRoot": "${workspaceFolder}/webapp" // path of work space
+        }
+    ]
+}
